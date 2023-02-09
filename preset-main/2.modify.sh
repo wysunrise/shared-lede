@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #修改登录IP
-sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 #修改主机名
 #sed -i 's/OpenWrt/Xiaomi-Router/g' package/base-files/files/bin/config_generate
@@ -41,8 +41,8 @@ cp $DEPLOYDIR/uci-scripts/* files/etc/uci-defaults/
 #sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.15' target/linux/ramips/Makefile
 
 #删除一些zzz中的命令
-ZZZ_PATH='package/default-settings/files/zzz-default-settings'
-sed -i -e '/DISTRIB_/d' -e '/footer.htm/d' -e '/admin_status/d' $ZZZ_PATH
+# ZZZ_PATH='package/default-settings/files/zzz-default-settings'
+# sed -i -e '/DISTRIB_/d' -e '/footer.htm/d' -e '/admin_status/d' $ZZZ_PATH
 
 #替换geodata源
 . extra-files/update-geodata.sh
