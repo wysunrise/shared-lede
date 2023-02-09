@@ -54,6 +54,7 @@ on:
         type: string
       cpu_overclock:
         description: '超频到1000Mhz(仅适用于5.10内核)'
+        # 0x312 1000MHz    0x362 1100MHz
         required: false
         default: 'true'
         type: boolean
