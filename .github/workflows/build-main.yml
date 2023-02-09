@@ -20,6 +20,7 @@ on:
       model:
         description: '选择设备'
         required: true
+        default: 'redmi-ac2100'
         type: choice
         options:
           - 'xiaomi-4a-gigabit'
@@ -54,6 +55,7 @@ on:
       cpu_overclock:
         description: '超频到1000Mhz(仅适用于5.10内核)'
         required: false
+        default: 'true'
         type: boolean
       kernel_5_15:
         description: '使用5.15内核'
