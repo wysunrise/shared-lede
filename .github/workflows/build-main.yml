@@ -78,6 +78,7 @@ jobs:
     name: 固件编译
     # if: inputs.build == 'true'
     if: github.event.repository.owner.id == github.event.sender.id
+    
     runs-on: ubuntu-latest
     env:
       TEMP_PREFIX: temp
