@@ -149,14 +149,14 @@ jobs:
 
       - name: 整理固件目录
         run: |
-          mkdir -p collected_firmware/packages
-          rm -rf $(find bin/targets/ -type d -name 'packages')
+          # mkdir -p collected_firmware/packages
+          # rm -rf $(find bin/targets/ -type d -name 'packages')
           cp $(find bin/targets/ -type f) collected_firmware
-          cp $(find bin/packages/ -type f -name '*.ipk') collected_firmware/packages
+          # cp $(find bin/packages/ -type f -name '*.ipk') collected_firmware/packages
           cd collected_firmware
           zip -r allfiles.zip *
-          cd packages
-          zip -r ../packages.zip *
+          # cd packages
+          # zip -r ../packages.zip *
 
       - name: 读取release文本
         id: release-text
