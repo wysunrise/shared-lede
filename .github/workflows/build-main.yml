@@ -149,7 +149,7 @@ jobs:
 
       - name: 整理固件目录
         run: |
-          # mkdir -p collected_firmware/packages
+          mkdir -p collected_firmware/packages
           # rm -rf $(find bin/targets/ -type d -name 'packages')
           cp $(find bin/targets/ -type f) collected_firmware
           # cp $(find bin/packages/ -type f -name '*.ipk') collected_firmware/packages

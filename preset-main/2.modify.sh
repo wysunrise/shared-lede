@@ -41,8 +41,8 @@ cp $DEPLOYDIR/uci-scripts/* files/etc/uci-defaults/
 #sed -i '/KERNEL_PATCHVER/cKERNEL_PATCHVER:=5.15' target/linux/ramips/Makefile
 
 #删除一些zzz中的命令
-# ZZZ_PATH='package/default-settings/files/zzz-default-settings'
-# sed -i -e '/DISTRIB_/d' -e '/footer.htm/d' -e '/admin_status/d' $ZZZ_PATH
+ZZZ_PATH='package/default-settings/files/zzz-default-settings'
+sed -i -e '/DISTRIB_/d' -e '/footer.htm/d' -e '/admin_status/d' $ZZZ_PATH
 
 #替换geodata源
 . extra-files/update-geodata.sh
